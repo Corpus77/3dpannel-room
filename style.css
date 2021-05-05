@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: lightgrey;
+
+}
+.container_button {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    width: 50%;
+    height: 10%;
+    justify-content: space-around;
+    margin: 1%;
+    background: rgb(105, 97, 98);
+    box-shadow: 13px 15px 5px black;
+
+}
+.input_div {
+    color:chartreuse;
+}
+.file, .inputFile {
+    margin: .7%;
+}
+
+.container_wall {
+    width: 80%;
+    height: 80%;
+    border: 1px solid black;
+}
+.wall {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.pannel {
+    /* border: 1px solid black; */
+    background-size: contain;
+}
+.rotate {
+    transform:rotate(90deg);
+
+}
