@@ -25,14 +25,21 @@ window.onload = function () {
             e.preventDefault()
             e.target.classList.toggle('rotate');
         }
-    })
+    });
+    fileAll.onfocus = (e) => {
+        fileAll.value = null;
+    }
     fileAll.oninput = (e) => {
+        
         pannelList.forEach((item) => {
             item.style.backgroundImage = `url(textures/${fileAll.files[0].name})`
         })
     }
     inputFile.oninput = (e) => {
-        image = `url(textures/${inputFile.files[0].name})`;
+        if (inputFile.value) {
+            image = `url(textures/${inputFile.files[0].name})`;
+        }
+        
         }
 
     

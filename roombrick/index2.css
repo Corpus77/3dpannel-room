@@ -1,0 +1,36 @@
+* {
+ margin: 0;
+ padding: 0; 
+}
+.container { 
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ width: 99vw;
+ height: 98vh;
+ border: 1px solid grey;
+}
+.wall {
+ display: flex;
+ flex-wrap: wrap;
+ width: 80%;
+ height: 70%;
+ border: 1px solid black;
+ overflow: hidden;
+}
+.brick {
+ position: relative;  
+ width:6%;
+ height: auto;
+ border: 1px solid lightgray;
+ overflow: hidden;
+}
+input {
+    margin: 5px;
+    padding: 1px;
+}
+#clear {
+    margin: 5px;
+    padding: 1px;  
+}

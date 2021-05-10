@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Две части и пол</title>
+    <link  rel = 'stylesheet' href = 'index1.css' />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+          <button class= "orientation">Вертикально/Горизонтально</button>
+          <label for = 'inwall'>Block 1</label> 
+          <input id = 'inwall' class = 'intexture' type = 'file'>
+          <label for = 'inpanel'>Block 2</label>
+          <input id = 'inpanel' class = 'intexture' type = 'file'>
+          <span class = 'range'>Пропорция</span>
+          <input type="range" class = "proportion" min = '0' max = '100'>
+          <button class="teeth">Зубцы</button>
+        </div>
+        <div class="container-wall">
+            <div class="block block_1"></div>
+            <div class="teeth_block"></div>
+            <div class="block block_2"></div>
+        </div>
+        
+        <div class="floor"></div>
+        <label for = 'infloor'>Пол</label> 
+          <input id = 'infloor' class = 'intexture' type = 'file'>
+    </div>
+    <script src = 'index1.js'></script>
+</body>
+</html>
