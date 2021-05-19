@@ -2,6 +2,24 @@
     margin: 0;
     padding: 0;
 }
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70vw;
+    margin-bottom: 1%;
+    transform: translateX(-11%);
+    /* border: 1px solid black; */
+}
+button {
+    padding: .2%;
+    font-weight: bolder;
+    letter-spacing: .1em;
+    margin: .2em;
+    border: 2px solid darkgoldenrod;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -19,7 +37,7 @@
     width: 70vw;
     height: 50vh;
     /* border: 1px solid red; */
-    transform: translateX(-10%);
+    transform: translateX(-11%);
 }
 .horizontal {
     flex-direction: column;
@@ -74,11 +92,7 @@
 
 
 
-.bl_orient {
-    width: 100%;
-    height: 50%;
-    background-size: 10%;   
-}
+
 .floor {
    display: flex;
    flex-wrap: wrap;
@@ -102,14 +116,16 @@
 label {
     margin: 5px;
     font-size: 55px;
-    color:red;
+    color:darkred;
     font-size: 120%;
 }
 .proportion {
-    
-    width: 400px;;
+    margin-left: 3%;
+    /* width: 220%; */
 }
 .range {
+    display: flex;
     margin: 10px;
-    font-size: 2vw;  
+    font-size: 1.3vw;
+    color:darkred;  
 }
