@@ -20,10 +20,7 @@ window.onload = function () {
     winChoice.onclick = applyTexture;    
     
     
-
     win_choice_button.onclick = choiceAppear ;
-    
-
     
 
     for (let i = 0; i<40; i++){
@@ -39,18 +36,13 @@ window.onload = function () {
     });
    
     
-    fileAll.onclick = () => {
+    fileAll.onclick = (e) => {
         choiceAppear();
         console.log('image from fileAll ' + image);
+        winChoice.addEventListener('click', fileAllHandler );
         
-            winChoice.addEventListener('click', fileAllHandler );
-            setTimeout (() => {
-                winChoice.removeEventListener('click', fileAllHandler );
-                },2000);
-
-            winChoice.onscroll = () => winChoice.addEventListener('click', fileAllHandler );   
-        
-        }
+        //winChoice.removeEventListener('click', fileAllHandler );
+}
     
     inputFile.onclick = choiceAppear;
         
@@ -88,11 +80,22 @@ window.onload = function () {
         console.log(image);
     }
 }
-   function fileAllHandler () {
-    console.log('click from fileAllHandler');
-    pannelList.forEach((item) => {
-    item.style.backgroundImage = `${image}`;
-                    })
+   function fileAllHandler (e) {
+
+   let stickAll = new Promise(function(resolve, reject) {
+    if (e.target.parentNode.classList.contains('example_container')) {
+        console.log('click from fileAllHandler');
+        pannelList.forEach((item) => {
+        item.style.backgroundImage = `${image}`;
+                        })
+    }
+    else {
+        winChoice.removeEventListener('click', fileAllHandler );
+    }
+   }).then ( winChoice.removeEventListener('click', fileAllHandler ))
+
+    
+   
    }
 
    function addPannel() {
