@@ -71,14 +71,7 @@ window.onload = function () {
 
 
 
-   function applyTexture (e) {
-    if (e.target.parentNode.classList.contains('example_container')) {
-        let chosen = e.target.parentNode.querySelector('p').innerText;
-        weblogic.image = `url(textures/${chosen})`;
-       weblogic.choiceAppear(winChoice);
-        console.log(weblogic.image);
-    }
-}
+
    function fileAllHandler (e) {
 
    let stickAll = new Promise(function(resolve, reject) {
