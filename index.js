@@ -3,26 +3,24 @@ import {weblogic} from "/custom_file_choice.js";
 
 window.onload = function () {
     
-    weblogic.createFileChoice();
+   weblogic.createFileChoice();
 
-    let win_choice_button = document.querySelector('#win_choice_button');
-    let winChoice = document.querySelector(".winChoice");
+   
+    let winChoice = weblogic.winChoice(); 
     let item_container = document.querySelector('.example_container');
     let wall = document.querySelector('.wall');
     let pannelSize = wall.offsetHeight/4;
     let inputFile = document.querySelector('.inputFile');
     let fileAll = document.querySelector('#fileAll');
     let clear = document.querySelector('.clear');
-    let image = "textures/woodgreybrown";
+   
 
     //Choice of files
     
-    winChoice.onclick = applyTexture;    
+    winChoice.onclick = (e) => {
+        weblogic.applyTexture(e, 'example_container', winChoice ) };     
     
     
-    win_choice_button.onclick = choiceAppear ;
-    
-
     for (let i = 0; i<40; i++){
         addPannel()
     };
@@ -37,21 +35,22 @@ window.onload = function () {
    
     
     fileAll.onclick = (e) => {
-        choiceAppear();
-        console.log('image from fileAll ' + image);
+       weblogic.choiceAppear(winChoice);
+        //console.log('weblogic.image from fileAll ' + weblogic.image);
+        console.log("weblogic.winChoice  "+weblogic.winChoice().classList);
         winChoice.addEventListener('click', fileAllHandler );
         
-        //winChoice.removeEventListener('click', fileAllHandler );
+        
 }
     
-    inputFile.onclick = choiceAppear;
+    inputFile.onclick = (e) => { weblogic.choiceAppear(winChoice)};
         
     
     
 
     wall.onclick = (e) => {
         if (e.target.classList.contains('pannel')) {
-            e.target.style.backgroundImage = image;
+            e.target.style.backgroundImage = weblogic.image;
         }
         
     }
@@ -68,16 +67,16 @@ window.onload = function () {
    }
 
  // Functions
-   function choiceAppear () {
-    winChoice.classList.toggle("choiceAppear");
-   }
+
+
+
 
    function applyTexture (e) {
     if (e.target.parentNode.classList.contains('example_container')) {
         let chosen = e.target.parentNode.querySelector('p').innerText;
-        image = `url(textures/${chosen})`;
-        choiceAppear();
-        console.log(image);
+        weblogic.image = `url(textures/${chosen})`;
+       weblogic.choiceAppear(winChoice);
+        console.log(weblogic.image);
     }
 }
    function fileAllHandler (e) {
@@ -86,7 +85,7 @@ window.onload = function () {
     if (e.target.parentNode.classList.contains('example_container')) {
         console.log('click from fileAllHandler');
         pannelList.forEach((item) => {
-        item.style.backgroundImage = `${image}`;
+        item.style.backgroundImage = `${weblogic.image}`;
                         })
     }
     else {
