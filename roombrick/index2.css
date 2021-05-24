@@ -1,73 +1,75 @@
 * {
- margin: 0;
- padding: 0; 
+  margin: 0;
+  padding: 0;
 }
-.container { 
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- width: 99vw;
- height: 98vh;
- background: grey;
- border: 1px solid grey;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 99vw;
+  height: 98vh;
+  background: grey;
+  border: 1px solid grey;
 }
 header {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    height: 10%;
-    /* margin: 1%;   */
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: 10%;
+  /* margin: 1%;   */
 }
-.controls { 
-    display: flex;
-    width: 35%;
-    height: 100%;
-    align-items:center;
-    justify-content: space-evenly;
-    font-size: 2em;
-    background: rgb(80, 249, 255);
-    color:rgb(38, 41, 241);
-    border: 1px solid black;
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  width: 35%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 90%;
+  background: rgb(80, 249, 255);
+  color: rgb(38, 41, 241);
+  border: 1px solid black;
 }
 .info {
-    display: flex;
-    width: 60%;
-    height: 100%;
-    align-items:center;
-    justify-content: space-evenly;
-    margin-bottom: 2%;
-    font-size: 1.4em;
-    background: rgb(80, 255, 159);
-    color:rgb(38, 41, 241);
-    border: 1px solid black;  
+  display: flex;
+  width: 60%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 2%;
+  font-size: 90%;
+  background: rgb(80, 255, 159);
+  color: rgb(38, 41, 241);
+  border: 1px solid black;
+  overflow: auto;
 }
 p {
   padding: 1%;
 }
 .wall {
- display: flex;
- flex-wrap: wrap;
- width: 80%;
- height: 70%;
- margin-top: 1%;
- border: 1px solid black;
- background: lightgrey;
- box-shadow: 15px 16px 4px black;
- overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 70%;
+  margin-top: 1%;
+  border: 1px solid black;
+  background: lightgrey;
+  box-shadow: 15px 16px 4px black;
+  overflow: hidden;
 }
 .brick {
- position: relative;  
- width:6%;
- height: auto;
- border: 1px solid rgb(114, 91, 91);
- overflow: hidden;
+  position: relative;
+  width: 6%;
+  height: auto;
+  border: 1px solid rgb(114, 91, 91);
+  overflow: hidden;
 }
 input {
-    margin: 5px;
-    padding: 1px;
+  margin: 5px;
+  padding: 1px;
 }
 #clear {
-    margin: 5px;
-    padding: 1px;  
+  margin: 5px;
+  padding: 1px;
 }
