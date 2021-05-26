@@ -74,7 +74,7 @@ input {
   padding: 1px;
 }
 .choiceAppear {
-  display: flex;
+  display: flex !important;
   flex-wrap: wrap;
   justify-content: center;
   overflow: scroll;
@@ -101,4 +101,9 @@ input {
 .item_paragr {
   color: black;
   font-size: 1.5em;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }

@@ -1,6 +1,6 @@
 import {filenames} from '/filenames.js';
 const weblogic = {
-    image: "textures/woodgreybrown",
+    image: undefined, //"textures/woodgreybrown",
     
     winChoice:function(){
         return document.querySelector(".winChoice")},
@@ -29,10 +29,10 @@ const weblogic = {
         winchoice.classList.toggle('choiceAppear');
        },
 
-       applyTexture: function (e, example, winChoice) {
+       applyTexture: function (e, example, winChoice, textures) {
         if (e.target.parentNode.classList.contains(example)) {
             let chosen = e.target.parentNode.querySelector('p').innerText;
-            weblogic.image = `url(textures/${chosen})`;
+            weblogic.image = `url(${textures}/${chosen})`;
            weblogic.choiceAppear(winChoice);
             console.log(weblogic.image);
         }

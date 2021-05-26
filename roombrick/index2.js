@@ -1,12 +1,12 @@
 import {weblogic} from "/custom_file_choice.js";
-weblogic.createFileChoice("../textures", ".container");
+weblogic.createFileChoice("../textures", "body");
 let winChoice = weblogic.winChoice();
 let wall = document.querySelector('.wall');
 let inWall = document.querySelector('#inwall');
 let clearAll = document.querySelector(".clearAll");
+let item_container = document.querySelector('.example_container');
 
 
-console.log(winChoice);
 //add bricks to the wall
 for (let i = 0;i<400;i++) {
     let brick = document.createElement('div');
@@ -24,15 +24,20 @@ for (let i = 0; i<400;i++) {
         }
     }
 }
-//?????????????????
+
 inWall.onclick = (e) => {
     weblogic.choiceAppear(winChoice);
-   // winChoice.classList.remove('winChoice');
-    console.log(winChoice);
+    
     }
 
+ //Choice of files
+    
+ winChoice.onclick = (e) => {
+    weblogic.applyTexture(e, 'example_container', winChoice, "../textures" ) };      
+
+
 let brickList = document.querySelectorAll(".brick") ;
-wall.addEventListener ('click', paint);
+wall.onclick = paint;
 wall.addEventListener ('dblclick', clear);
 clearAll.onclick = (e) => {
    brickList.forEach((item) => {
@@ -47,14 +52,12 @@ function clear(event) {
     }
 }
 function paint (event) {
-if (inWall.files[0].name) {
+if (weblogic.image) {
     if (event.target.classList.contains('brick')) {
-        event.target.style.backgroundImage = 
-        `url(../textures/${inWall.files[0].name})`;
+        event.target.style.backgroundImage = weblogic.image;
+        
     }
     
-}
-    
-    
-}
+        }
+            }
 

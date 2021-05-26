@@ -18,7 +18,7 @@ window.onload = function () {
     //Choice of files
     
     winChoice.onclick = (e) => {
-        weblogic.applyTexture(e, 'example_container', winChoice ) };     
+        weblogic.applyTexture(e, 'example_container', winChoice, "textures" ) };     
     
     
     for (let i = 0; i<40; i++){
