@@ -3,7 +3,7 @@ import {weblogic} from "/custom_file_choice.js";
 
 window.onload = function () {
     
-   weblogic.createFileChoice();
+   weblogic.createFileChoice("textures", ".container");
 
    
     let winChoice = weblogic.winChoice(); 

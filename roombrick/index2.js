@@ -1,8 +1,12 @@
-
+import {weblogic} from "/custom_file_choice.js";
+weblogic.createFileChoice("../textures", ".container");
+let winChoice = weblogic.winChoice();
 let wall = document.querySelector('.wall');
 let inWall = document.querySelector('#inwall');
 let clearAll = document.querySelector(".clearAll");
 
+
+console.log(winChoice);
 //add bricks to the wall
 for (let i = 0;i<400;i++) {
     let brick = document.createElement('div');
@@ -20,6 +24,13 @@ for (let i = 0; i<400;i++) {
         }
     }
 }
+//?????????????????
+inWall.onclick = (e) => {
+    weblogic.choiceAppear(winChoice);
+   // winChoice.classList.remove('winChoice');
+    console.log(winChoice);
+    }
+
 let brickList = document.querySelectorAll(".brick") ;
 wall.addEventListener ('click', paint);
 wall.addEventListener ('dblclick', clear);

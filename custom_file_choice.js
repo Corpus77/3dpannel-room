@@ -6,7 +6,7 @@ const weblogic = {
         return document.querySelector(".winChoice")},
 
 
-    createFileChoice: function () {
+    createFileChoice: function (textures, container) {
         let winChoice = document.createElement('div');
         winChoice.className = "winChoice";
         for (let i=0; i<105; i++) {
@@ -15,18 +15,18 @@ const weblogic = {
             item_container.innerHTML = 
             "<img class = 'item' alt = 'none'><p></p>";
             let image = item_container.querySelector('img');
-            image.setAttribute('src', `textures/${filenames[i]}`);
+            image.setAttribute('src', `${textures}/${filenames[i]}`);
             let item_paragr = item_container.querySelector('p');
             item_paragr.className = 'item_paragr';
             item_paragr.innerText = `${filenames[i]}`;
             winChoice.append(item_container);
         }
-
-        document.body.append(winChoice);
+        let webcontainer = document.querySelector(container);
+        webcontainer.append(winChoice);
     },
 
     choiceAppear: function (winchoice) {
-        winchoice.classList.toggle("choiceAppear");
+        winchoice.classList.toggle('choiceAppear');
        },
 
        applyTexture: function (e, example, winChoice) {
