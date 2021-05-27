@@ -131,6 +131,8 @@ const filenames = [
     'woodmiata.jpg',
     'woodoakdark.jpg',
     'woodolhadark.jpg',
-   
+    'woodredoak.jpg',
+    'woodzebra.jpg',
+    'yellowromb+.jpg'
     ]
     export {filenames};

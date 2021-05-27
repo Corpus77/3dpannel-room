@@ -1,6 +1,7 @@
 import {weblogic} from "/custom_file_choice.js";
 weblogic.createFileChoice("../textures", "body");
 let winChoice = weblogic.winChoice();
+
 let wall = document.querySelector('.wall');
 let inWall = document.querySelector('#inwall');
 let clearAll = document.querySelector(".clearAll");

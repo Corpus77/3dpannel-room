@@ -1,7 +1,10 @@
+import {weblogic} from "/custom_file_choice.js";
+weblogic.createFileChoice("../textures", "body");
+let winChoice = weblogic.winChoice();
+
+
 let inWall = document.querySelector('#inwall');
 let inPanel = document.querySelector('#inpanel');
-let infloor = document.querySelector('#infloor');
-let floor = document.querySelector('.floor');
 let block_1 = document.querySelector('.block_1');
 let block_2 = document.querySelector('.block_2');
 let orient = document.querySelector('.orientation');
@@ -10,6 +13,8 @@ let proportion = document.querySelector('.proportion');
 let teeth = document.querySelector(".teeth");
 let teethBlock = document.querySelector('.teeth_block');
 let teethFlag = false;
+
+let aim = null;
 
 
 // fullfill teethblock
@@ -30,65 +35,60 @@ stickerList_1.forEach((item)=>{
     item.style.height = stickerSize_1 + 'px';
     
 })
-// // Calculating sticker size adoptively_2
 
-// let stickerSize_2 = block_2.offsetHeight/3.5 - 1;
-// let stickerList_2 = document.querySelectorAll('.sticker_2');
-// stickerList_2.forEach((item)=>{
-//     item.style.width = stickerSize_2 + 'px';
-//     item.style.height = stickerSize_2 + 'px';
-    
-// })
 
-// Calculating floorEl size adoptively
-let floorSize = floor.offsetHeight/10 -1;
-let floorSizeWidth = floor.offsetWidth/13;
+
 
     
 // adopts background stickers
 block_1.style.backgroundSize = stickerSize_1 + "px";
 block_2.style.backgroundSize = stickerSize_1 + "px";    
- // adopts background floor elements  
-floor.style.backgroundSize = floorSizeWidth + 'px' + " " +
-floorSize + "px";
+ 
 
-inWall.oninput = (e)=>{
+
+
+
+
+winChoice.onclick =
+(e) => {
+    weblogic.applyTexture(e, 'example_container', winChoice, "../textures" );
+    switch (aim){
+    case 'bl_1': 
+    if ( weblogic.image){
+        block_1.style.backgroundImage = weblogic.image;
+    }; break;
+    case 'bl_2':
+        if ( weblogic.image){
+            block_2.style.backgroundImage = weblogic.image;
+        }; break;
+
+   }
+}
+inWall.onclick = (e)=>{
+    weblogic.choiceAppear(winChoice);
+    aim = "bl_1";
     
-    block_1.style.backgroundImage = `url(../textures/${inWall.files[0].name})`;
-   // block_1.style.backgroundImage = `url(../textures/${inWall.files[0].name})`;
-    stickerList_1.forEach((item)=>{
-        item.style.backgroundImage = `url(../textures/${inWall.files[0].name})`;
-    })
 }
-inPanel.oninput = (e)=>{
+inPanel.onclick = (e)=>{
+    weblogic.choiceAppear(winChoice);
+    aim = "bl_2";
+    //block_2.style.backgroundImage = weblogic.image;
     
-    block_2.style.backgroundImage = `url(../textures/${inPanel.files[0].name})`;
-    // stickerList_2.forEach((item)=>{
-    //     item.style.backgroundImage = `url(textures/${inPanel.files[0].name})`;
-    // })
 }
-infloor.oninput = (e)=>{
-    floor.style.backgroundImage = `url(../textures/floor/${infloor.files[0].name})`;
-    floorList = document.querySelectorAll('.floor_el');
-    floorList.forEach((item) => {
-        item.style.backgroundImage = `url(../textures/floor/${infloor.files[0].name})`;
-        
-    })
-       
-}
+
 orient.onclick = (e) => {
  if (teethFlag) {
     teethBlock.classList.toggle('disp_teeth');
  }    
  if (contWall.classList.contains('horizontal')) {
-    //teethBlock.classList.toggle('disp_teeth');
+    
      block_1.style.height = 100 + '%';
      block_2.style.height = 100 + '%';
      block_1.style.flexDirection = "row-reverse";
     
  }
  else {
-    //teethBlock.classList.toggle('disp_teeth');
+    
     block_1.style.width = 100 + '%'; 
     block_2.style.width = 100 + '%';
     block_1.style.flexDirection = "row";

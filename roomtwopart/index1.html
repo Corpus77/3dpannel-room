@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Две части и пол</title>
+    <title>Две части</title>
     <link  rel = 'stylesheet' href = 'index1.css' />
 </head>
 <body>
     <div class="container">
         <div class="header">
           <button class= "orientation">Вертикально/Горизонтально</button>
-          <label for = 'inwall'>Block 1</label> 
-          <input id = 'inwall' class = 'intexture' type = 'file'>
-          <label for = 'inpanel'>Block 2</label>
-          <input id = 'inpanel' class = 'intexture' type = 'file'>
+          
+          <button id = 'inwall' class = 'intexture' >Блок 1</button>
+          
+          <button id = 'inpanel' class = 'intexture' > Блок 2</button>
           <div class = 'range'> 
             <span >Пропорция</span>
           <input type="range" class = "proportion" min = '0' max = '100'>
@@ -27,10 +27,10 @@
             <div class="block block_2"></div>
         </div>
         
-        <div class="floor"></div>
-        <label for = 'infloor'>Пол</label> 
-          <input id = 'infloor' class = 'intexture' type = 'file'>
+        
+        
+          
     </div>
-    <script src = 'index1.js'></script>
+    <script type="module" src = 'index1.js'></script>
 </body>
 </html>

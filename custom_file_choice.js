@@ -9,7 +9,7 @@ const weblogic = {
     createFileChoice: function (textures, container) {
         let winChoice = document.createElement('div');
         winChoice.className = "winChoice";
-        for (let i=0; i<105; i++) {
+        for (let i=0; i<filenames.length; i++) {
             let item_container = document.createElement('div');
             item_container.className = 'example_container';
             item_container.innerHTML = 

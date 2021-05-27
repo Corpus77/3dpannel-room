@@ -33,6 +33,7 @@ header {
 }
 .info {
   display: flex;
+  padding: 5px;
   width: 60%;
   height: 100%;
   align-items: center;
@@ -107,3 +108,17 @@ img {
   height: 100%;
   object-fit: contain;
 }
+
+/* media request */
+@media (max-width: 1040px) {
+  .info {
+    font-size: 0.5em;
+    padding: 2px;
+  }
+}
+/* @media (min-width: 1370px) {
+  .info {
+    font-size: 5em;
+    padding: 20px;
+  }
+} */

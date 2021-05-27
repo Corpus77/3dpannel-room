@@ -26,7 +26,7 @@ img {
 .answer {
   padding: 0.5em;
   margin: 2%;
-  font-size: 2em;
+  font-size: auto;
   font-weight: bolder;
   background-color: thistle;
   color: black;
@@ -50,16 +50,19 @@ img {
   background: rgb(105, 97, 98);
   box-shadow: 10px 12px 5px black;
 }
-.input_div,
+
 p {
   color: chartreuse;
 }
 .ref {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   min-width: 20%;
   /* border: 1px solid black; */
 }
 .parref {
-  margin: 4%;
+  margin: 4% auto;
 }
 
 .container_wall {
@@ -115,4 +118,13 @@ p {
 .item_paragr {
   color: black;
   font-size: 1.5em;
+}
+/* media request */
+@media screen and (max-width: 830px) {
+  .container_button {
+    height: 20%;
+  }
+  .container_wall {
+    height: 70%;
+  }
 }
