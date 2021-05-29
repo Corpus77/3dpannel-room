@@ -21,16 +21,13 @@ window.onload = function () {
         weblogic.applyTexture(e, 'example_container', winChoice, "textures" ) };     
     
     
-    for (let i = 0; i<40; i++){
+    for (let i = 0; i<150; i++){
         addPannel()
     };
     
     let pannelList = document.querySelectorAll('.pannel');
     pannelList.forEach((item) => {
-        item.oncontextmenu = (e) => {
-            e.preventDefault()
-            e.target.classList.toggle('rotate');
-        }
+        contextMenu();
     });
    
     
@@ -66,17 +63,38 @@ window.onload = function () {
         })
    }
 
+// onresize - recalculating
+    window.onresize = (e) => {
+        
+        let remove = new Promise (function(resolve, reject) {
+            removePannel();
+            console.log('promise');
+        }).
+        then (
+            whenRemoved()
+        ).
+        then (contextMenu())
+           
+    }
+
  // Functions
-
-
-
-
+  
+    function contextMenu() { 
+        let pannelList = document.querySelectorAll('.pannel');
+        pannelList.forEach((item) => {
+            item.oncontextmenu = (e) => {
+                e.preventDefault()
+                e.target.classList.toggle('rotate');
+            }
+        });
+    }
 
    function fileAllHandler (e) {
 
    let stickAll = new Promise(function(resolve, reject) {
     if (e.target.parentNode.classList.contains('example_container')) {
         console.log('click from fileAllHandler');
+        let pannelList = document.querySelectorAll('.pannel');
         pannelList.forEach((item) => {
         item.style.backgroundImage = `${weblogic.image}`;
                         })
@@ -99,6 +117,24 @@ window.onload = function () {
     wall.append(pannel);
     }
 
+    function removePannel() {
+        let pannelList = document.querySelectorAll('.pannel');
+        for (let i=0; i<pannelList.length;i++) {
+            wall.removeChild(pannelList[i]);
+        }
+
+    }
+
+    function whenRemoved(){
+        pannelSize = wall.offsetHeight/4-0.2;
+        for (let i = 0; i<150; i++){
+            addPannel()
+        };
+        let pannelList = document.querySelectorAll('.pannel');
+        pannelList.forEach((item) => {
+            item.style.backgroundImage = `${weblogic.image}`;
+                            })
+        console.log('then');}
 
 
 }
