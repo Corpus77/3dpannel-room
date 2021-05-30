@@ -13,19 +13,24 @@ img {
   height: 100%;
   object-fit: contain;
 }
+.q {
+  width: 100%;
+  height: 100%;
+  background-image: url("textures/ekroux.jpg");
+}
 .body_answer {
-  padding: 2%;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-image: url("textures/ekgreyblue.jpg");
+  overflow-x: hidden;
 }
 .answer {
   padding: 0.5em;
-  margin: 2%;
+  margin: 1%;
   font-size: auto;
   font-weight: bolder;
   background-color: thistle;
@@ -62,7 +67,7 @@ p {
   /* border: 1px solid black; */
 }
 .parref {
-  margin: 4% auto;
+  margin: 3% auto;
 }
 
 .container_wall {

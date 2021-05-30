@@ -33,8 +33,8 @@ const weblogic = {
         if (e.target.parentNode.classList.contains(example)) {
             let chosen = e.target.parentNode.querySelector('p').innerText;
             weblogic.image = `url(${textures}/${chosen})`;
-           weblogic.choiceAppear(winChoice);
-            console.log(weblogic.image);
+            weblogic.choiceAppear(winChoice);
+            
         }
     }
     

@@ -12,10 +12,16 @@ let contWall = document.querySelector('.container-wall');
 let proportion = document.querySelector('.proportion');
 let teeth = document.querySelector(".teeth");
 let teethBlock = document.querySelector('.teeth_block');
+let stickerSize_1 = block_1.offsetHeight/3.5 -1;;
 let teethFlag = false;
 
 let aim = null;
 
+block_1.style.backgroundImage = 'url(../textures/3blue.jpg)';
+block_2.style.backgroundImage = 'url(../textures/4seamix.jpg)';
+// adopts background stickers
+
+bgAdopts();
 
 // fullfill teethblock
 for (let t=1;t<34;t++) {
@@ -26,28 +32,9 @@ for (let t=1;t<34;t++) {
 }
 let bricks = document.querySelectorAll('.teeth_brick');
 
-
-// Calculating sticker size adoptively_1
-let stickerSize_1 = block_1.offsetHeight/3.5 -1;
-let stickerList_1 = document.querySelectorAll('.sticker_1');
-stickerList_1.forEach((item)=>{
-    item.style.width = stickerSize_1 + 'px';
-    item.style.height = stickerSize_1 + 'px';
-    
-})
-
-
-
-
-    
-// adopts background stickers
-block_1.style.backgroundSize = stickerSize_1 + "px";
-block_2.style.backgroundSize = stickerSize_1 + "px";    
- 
-
-
-
-
+window.onresize = (e) => {
+    bgAdopts ()
+}    
 
 winChoice.onclick =
 (e) => {
@@ -136,6 +123,14 @@ teeth.onclick = (e) => {
         
     }
     
+}
+
+// functions
+
+function bgAdopts () {
+    stickerSize_1 = block_1.offsetHeight/3.5 -1;
+    block_1.style.backgroundSize =  stickerSize_1 + "px";
+    block_2.style.backgroundSize =  stickerSize_1 + "px"; 
 }
     
 

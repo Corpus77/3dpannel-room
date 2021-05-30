@@ -3,18 +3,19 @@ import {weblogic} from "/custom_file_choice.js";
 
 window.onload = function () {
     
-   weblogic.createFileChoice("textures", ".container");
+    weblogic.createFileChoice("textures", ".container");
 
    
     let winChoice = weblogic.winChoice(); 
-    let item_container = document.querySelector('.example_container');
     let wall = document.querySelector('.wall');
     let pannelSize = wall.offsetHeight/4-0.2;
     let inputFile = document.querySelector('.inputFile');
     let fileAll = document.querySelector('#fileAll');
     let clear = document.querySelector('.clear');
    
-
+   
+   
+    
     //Choice of files
     
     winChoice.onclick = (e) => {
@@ -33,9 +34,7 @@ window.onload = function () {
     
     fileAll.onclick = (e) => {
        weblogic.choiceAppear(winChoice);
-        //console.log('weblogic.image from fileAll ' + weblogic.image);
-        console.log("weblogic.winChoice  "+weblogic.winChoice().classList);
-        winChoice.addEventListener('click', fileAllHandler );
+       winChoice.addEventListener('click', fileAllHandler );
         
         
 }
@@ -93,7 +92,6 @@ window.onload = function () {
 
    let stickAll = new Promise(function(resolve, reject) {
     if (e.target.parentNode.classList.contains('example_container')) {
-        console.log('click from fileAllHandler');
         let pannelList = document.querySelectorAll('.pannel');
         pannelList.forEach((item) => {
         item.style.backgroundImage = `${weblogic.image}`;
@@ -134,7 +132,8 @@ window.onload = function () {
         pannelList.forEach((item) => {
             item.style.backgroundImage = `${weblogic.image}`;
                             })
-        console.log('then');}
+        }
 
 
 }
+

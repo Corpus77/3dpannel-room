@@ -61,10 +61,14 @@ p {
 }
 .brick {
   position: relative;
-  width: 6%;
+  /* width: 6%; */
+  width: 4.6vw;
   height: auto;
   border: 1px solid rgb(114, 91, 91);
   overflow: hidden;
+}
+.brickResize {
+  width: 4.3vw;
 }
 input {
   margin: 5px;
@@ -116,6 +120,7 @@ img {
     padding: 2px;
   }
 }
+
 /* @media (min-width: 1370px) {
   .info {
     font-size: 5em;

@@ -1,12 +1,18 @@
 import {weblogic} from "/custom_file_choice.js";
 weblogic.createFileChoice("../textures", "body");
 let winChoice = weblogic.winChoice();
-
 let wall = document.querySelector('.wall');
 let inWall = document.querySelector('#inwall');
 let clearAll = document.querySelector(".clearAll");
-let item_container = document.querySelector('.example_container');
 
+window.onload = () => {
+    brickAdopts();
+}
+
+window.onresize = (e) => {
+    
+    brickAdopts();
+}
 
 //add bricks to the wall
 for (let i = 0;i<400;i++) {
@@ -45,6 +51,9 @@ clearAll.onclick = (e) => {
        item.style.backgroundImage = "none";
    }) 
 }
+
+// Functions
+
 function clear(event) {
     if (event.target.classList.contains('brick')) {
         event.target.style.backgroundImage = 
@@ -62,3 +71,18 @@ if (weblogic.image) {
         }
             }
 
+function brickAdopts() {
+    // to fix for big screen
+    if (wall.parentNode.offsetWidth < 555) {
+        let brickList = document.querySelectorAll('.brick');
+        brickList.forEach((item) => {
+            item.classList.add('brickResize');
+        })
+    } else {
+        let brickList = document.querySelectorAll('.brick');
+        brickList.forEach((item) => {
+            item.classList.remove('brickResize');
+        })
+        console.log('remove size')
+    }
+}
