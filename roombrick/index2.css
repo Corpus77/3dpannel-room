@@ -119,6 +119,9 @@ img {
     font-size: 0.5em;
     padding: 2px;
   }
+  .item_paragr {
+    font-size: 0.5em;
+  }
 }
 
 /* @media (min-width: 1370px) {
