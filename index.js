@@ -1,9 +1,11 @@
-
+import {filenames} from '/filenames1.js';
 import {weblogic} from "/custom_file_choice.js";
 
 window.onload = function () {
     
     weblogic.createFileChoice("textures", ".container");
+   
+
 
    
     let winChoice = weblogic.winChoice(); 
@@ -12,15 +14,15 @@ window.onload = function () {
     let inputFile = document.querySelector('.inputFile');
     let fileAll = document.querySelector('#fileAll');
     let clear = document.querySelector('.clear');
-   
-   
-   
+       
     
     //Choice of files
     
     winChoice.onclick = (e) => {
-        weblogic.applyTexture(e, 'example_container', winChoice, "textures" ) };     
-    
+        weblogic.applyTexture(e, 'example_container', winChoice, "textures" ) 
+        
+    };     
+        
     
     for (let i = 0; i<150; i++){
         addPannel()
@@ -35,6 +37,9 @@ window.onload = function () {
     fileAll.onclick = (e) => {
        weblogic.choiceAppear(winChoice);
        winChoice.addEventListener('click', fileAllHandler );
+       //---------------------
+       
+      
         
         
 }
@@ -47,6 +52,8 @@ window.onload = function () {
     wall.onclick = (e) => {
         if (e.target.classList.contains('pannel')) {
             e.target.style.backgroundImage = weblogic.image;
+            
+            
         }
         
     }
@@ -65,7 +72,7 @@ window.onload = function () {
 // onresize - recalculating
     window.onresize = (e) => {
         
-        let remove = new Promise (function(resolve, reject) {
+        let resize = new Promise (function(resolve, reject) {
             
             resized()
         }).
@@ -74,6 +81,8 @@ window.onload = function () {
            }
 
  // Functions
+    
+    
   
     function contextMenu() { 
         let pannelList = document.querySelectorAll('.pannel');
@@ -97,8 +106,9 @@ window.onload = function () {
     else {
         winChoice.removeEventListener('click', fileAllHandler );
     }
-   }).then ( winChoice.removeEventListener('click', fileAllHandler ))
+   }).then ( winChoice.removeEventListener('click', fileAllHandler ));  
 
+   
     
    
    }

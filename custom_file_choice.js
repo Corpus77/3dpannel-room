@@ -1,7 +1,6 @@
-import {filenames} from '/filenames.js';
+import {filenames} from '/filenames1.js';
 const weblogic = {
-    image: undefined, //"textures/woodgreybrown",
-    
+    image: undefined,
     winChoice:function(){
         return document.querySelector(".winChoice")},
 
@@ -15,10 +14,19 @@ const weblogic = {
             item_container.innerHTML = 
             "<img class = 'item' alt = 'none'><p></p>";
             let image = item_container.querySelector('img');
-            image.setAttribute('src', `${textures}/${filenames[i]}`);
             let item_paragr = item_container.querySelector('p');
             item_paragr.className = 'item_paragr';
-            item_paragr.innerText = `${filenames[i]}`;
+
+
+            for (let keyFilename in filenames[i]){
+                image.setAttribute('src', `${textures}/${keyFilename}`);
+                item_paragr.innerText = `${keyFilename}`;
+            }
+
+
+            
+
+
             winChoice.append(item_container);
         }
         let webcontainer = document.querySelector(container);
@@ -33,6 +41,27 @@ const weblogic = {
         if (e.target.parentNode.classList.contains(example)) {
             let chosen = e.target.parentNode.querySelector('p').innerText;
             weblogic.image = `url(${textures}/${chosen})`;
+            //console.log(e.target.parentNode.lastChild.innerHTML);
+            //------------------------------------------------
+            for (let filenameObj of filenames) {
+                for (let name in filenameObj) {
+                    if (name == e.target.parentNode.lastChild.innerHTML ) {
+                        //console.log('found');
+                        if (filenameObj[name] == 77) {
+                            
+                            
+                        }
+                        else {
+
+                            
+                        }
+                    }
+                    //filenameObj[name] == 77) 
+                        
+                    
+                }
+            }
+
             weblogic.choiceAppear(winChoice);
             
         }
