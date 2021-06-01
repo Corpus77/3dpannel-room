@@ -31,7 +31,7 @@ img {
 .answer {
   padding: 0.5em;
   margin: 1%;
-  font-size: auto;
+  font-size: 1.5rem;
   font-weight: bolder;
   background-color: thistle;
   color: black;
@@ -131,5 +131,10 @@ p {
   }
   .container_wall {
     height: 70%;
+  }
+}
+@media screen and (min-height: 790px) {
+  .answer {
+    font-size: 2rem;
   }
 }

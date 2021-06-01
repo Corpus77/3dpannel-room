@@ -66,15 +66,12 @@ window.onload = function () {
     window.onresize = (e) => {
         
         let remove = new Promise (function(resolve, reject) {
-            removePannel();
-            console.log('promise');
+            
+            resized()
         }).
-        then (
-            whenRemoved()
-        ).
         then (contextMenu())
-           
-    }
+        
+           }
 
  // Functions
   
@@ -115,25 +112,15 @@ window.onload = function () {
     wall.append(pannel);
     }
 
-    function removePannel() {
-        let pannelList = document.querySelectorAll('.pannel');
-        for (let i=0; i<pannelList.length;i++) {
-            wall.removeChild(pannelList[i]);
-        }
-
-    }
-
-    function whenRemoved(){
+    function resized(){
         pannelSize = wall.offsetHeight/4-0.2;
         for (let i = 0; i<150; i++){
-            addPannel()
-        };
-        let pannelList = document.querySelectorAll('.pannel');
-        pannelList.forEach((item) => {
-            item.style.backgroundImage = `${weblogic.image}`;
-                            })
-        }
+            pannelList[i].style.width = pannelSize +'px';
+            pannelList[i].style.height = pannelSize +'px';
 
+        };
+        
+    }
 
 }
 
