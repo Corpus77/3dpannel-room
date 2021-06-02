@@ -1,6 +1,8 @@
 import {filenames} from '/filenames1.js';
 const weblogic = {
     image: undefined,
+    chosen: undefined,
+    heightFlag: null,
     winChoice:function(){
         return document.querySelector(".winChoice")},
 
@@ -8,23 +10,30 @@ const weblogic = {
     createFileChoice: function (textures, container) {
         let winChoice = document.createElement('div');
         winChoice.className = "winChoice";
+        
         for (let i=0; i<filenames.length; i++) {
+            
+            let objKeys = Object.keys(filenames[i]);
+            
             let item_container = document.createElement('div');
             item_container.className = 'example_container';
             item_container.innerHTML = 
-            "<img class = 'item' alt = 'none'><p></p>";
+            "<img class = 'item' alt = 'none'><p></p><span></span>";
             let image = item_container.querySelector('img');
             let item_paragr = item_container.querySelector('p');
             item_paragr.className = 'item_paragr';
 
-
-            for (let keyFilename in filenames[i]){
-                image.setAttribute('src', `${textures}/${keyFilename}`);
-                item_paragr.innerText = `${keyFilename}`;
+            image.setAttribute('src', `${textures}/${objKeys[0]}`);
+            item_paragr.innerText = `${filenames[i][objKeys[1]]}`;
+            //-------------------------------------------
+            if (filenames[i][objKeys[0]] == 77) {
+                let size = item_container.querySelector('span');
+                size.textContent = '700x770mm'; 
+                
+            } else {
+                let size = item_container.querySelector('span');
+                size.textContent = '700x700mm'; 
             }
-
-
-            
 
 
             winChoice.append(item_container);
@@ -39,29 +48,20 @@ const weblogic = {
 
        applyTexture: function (e, example, winChoice, textures) {
         if (e.target.parentNode.classList.contains(example)) {
-            let chosen = e.target.parentNode.querySelector('p').innerText;
-            weblogic.image = `url(${textures}/${chosen})`;
-            //console.log(e.target.parentNode.lastChild.innerHTML);
-            //------------------------------------------------
-            for (let filenameObj of filenames) {
-                for (let name in filenameObj) {
-                    if (name == e.target.parentNode.lastChild.innerHTML ) {
-                        //console.log('found');
-                        if (filenameObj[name] == 77) {
-                            
-                            
-                        }
-                        else {
-
-                            
-                        }
-                    }
-                    //filenameObj[name] == 77) 
-                        
-                    
+            
+            for (let imageObj of filenames){
+                let imageObjKeys = Object.keys(imageObj);
+                
+                if (e.target.parentNode.querySelector('p').innerText ==
+                imageObj['title']) {
+                    this.chosen = imageObjKeys[0];
+                    console.log(this.chosen);
                 }
+                
             }
-
+            //let chosen = e.target.parentNode.querySelector('p').innerText;
+            weblogic.image = `url(${textures}/${this.chosen})`;
+            
             weblogic.choiceAppear(winChoice);
             
         }

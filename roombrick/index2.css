@@ -105,7 +105,7 @@ input {
 }
 .item_paragr {
   color: black;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 img {
   width: 100%;
@@ -119,14 +119,8 @@ img {
     font-size: 0.5em;
     padding: 2px;
   }
-  .item_paragr {
-    font-size: 0.5em;
+  .item_paragr,
+  span {
+    font-size: 0.7em;
   }
 }
-
-/* @media (min-width: 1370px) {
-  .info {
-    font-size: 5em;
-    padding: 20px;
-  }
-} */
