@@ -24,7 +24,7 @@ block_2.style.backgroundImage = 'url(../textures/4seamix.jpg)';
 bgAdopts();
 
 // fullfill teethblock
-for (let t=1;t<34;t++) {
+for (let t=1;t<35;t++) {
     let teethBrick = document.createElement('div');
     teethBrick.classList.add("teeth_brick");
     teethBlock.append(teethBrick);

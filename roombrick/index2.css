@@ -31,13 +31,17 @@ header {
   color: rgb(38, 41, 241);
   border: 1px solid black;
 }
+button {
+  cursor: pointer;
+}
 .info {
   display: flex;
+  /* flex-wrap: wrap; */
   padding: 5px;
   width: 60%;
   height: 100%;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-bottom: 2%;
   font-size: 90%;
   background: rgb(80, 255, 159);
@@ -102,6 +106,7 @@ input {
   margin: 2%;
   width: 25%;
   height: auto;
+  cursor: pointer;
 }
 .item_paragr {
   color: black;
