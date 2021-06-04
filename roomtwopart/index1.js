@@ -1,4 +1,4 @@
-import {weblogic} from "/custom_file_choice.js";
+import {weblogic} from "../custom_file_choice.js";
 weblogic.createFileChoice("../textures", "body");
 let winChoice = weblogic.winChoice();
 

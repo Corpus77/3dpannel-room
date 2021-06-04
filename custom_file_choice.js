@@ -1,4 +1,4 @@
-import {filenames} from '/filenames1.js';
+import {filenames} from './filenames1.js';
 const weblogic = {
     image: undefined,
     chosen: undefined,
