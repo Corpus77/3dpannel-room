@@ -100,7 +100,7 @@ window.onload = function () {
     if (e.target.parentNode.classList.contains('example_container')) {
         let pannelList = document.querySelectorAll('.pannel');
         pannelList.forEach((item) => {
-        item.style.backgroundImage = `${weblogic.image}`;
+        item.style.backgroundImage = weblogic.image;
                         })
     }
     else {

@@ -4,7 +4,8 @@ let winChoice = weblogic.winChoice();
 let wall = document.querySelector('.wall');
 let inWall = document.querySelector('#inwall');
 let clearAll = document.querySelector(".clearAll");
-
+let allwall = document.querySelector('#allwall');
+let allwallList = document.getElementsByClassName('brick');
 window.onload = () => {
     brickAdopts();
 }
@@ -52,6 +53,19 @@ clearAll.onclick = (e) => {
    }) 
 }
 
+allwall.onclick = (e) => {
+    weblogic.choiceAppear(winChoice);
+    if (weblogic.image) {
+        for (let i=0;i<allwallList.length;i++){
+            allwallList.item(i).style.backgroundImage = weblogic.image;
+        }
+    }
+    
+    // brickList.forEach((brick) => {
+    //     brick.style.backgroundImage = weblogic.image;
+    // });
+    console.log('allwall');
+}
 // Functions
 
 function clear(event) {
