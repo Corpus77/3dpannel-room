@@ -1,4 +1,4 @@
-import {weblogic} from "/custom_file_choice.js";
+import {weblogic} from "../custom_file_choice.js";
 weblogic.createFileChoice("../textures", "body");
 let winChoice = weblogic.winChoice();
 let wall = document.querySelector('.wall');
@@ -41,7 +41,8 @@ inWall.onclick = (e) => {
  //Choice of files
     
  winChoice.onclick = (e) => {
-    weblogic.applyTexture(e, 'example_container', winChoice, "../textures" ) };      
+    weblogic.applyTexture(e, 'example_container', winChoice, "../textures" ) 
+    };      
 
 
 let brickList = document.querySelectorAll(".brick") ;
@@ -54,19 +55,19 @@ clearAll.onclick = (e) => {
 }
 
 allwall.onclick = (e) => {
-    weblogic.choiceAppear(winChoice);
-    if (weblogic.image) {
+    
+   
         for (let i=0;i<allwallList.length;i++){
             allwallList.item(i).style.backgroundImage = weblogic.image;
+            console.log(allwallList.item(i).style.backgroundImage);
         }
-    }
+        
+   
     
-    // brickList.forEach((brick) => {
-    //     brick.style.backgroundImage = weblogic.image;
-    // });
-    console.log('allwall');
 }
 // Functions
+
+
 
 function clear(event) {
     if (event.target.classList.contains('brick')) {

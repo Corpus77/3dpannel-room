@@ -17,6 +17,7 @@ button {
   letter-spacing: 0.1em;
   margin: 0.2em;
   border: 2px solid darkgoldenrod;
+  cursor: pointer;
 }
 
 .container {
@@ -35,14 +36,13 @@ button {
   align-items: center;
   width: 70vw;
   height: 70vh;
+  border: 1px solid black;
 }
 
 .horizontal {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
-  transform: translateX(-10%);
 }
 
 .block {
@@ -85,7 +85,9 @@ button {
   font-size: 1.3vw;
   color: darkred;
 }
-
+input {
+  cursor: pointer;
+}
 /* webcommon-------------------- */
 .choiceAppear {
   display: flex !important;
@@ -111,6 +113,7 @@ button {
   margin: 2%;
   width: 25%;
   height: auto;
+  cursor: pointer;
 }
 .item_paragr {
   color: black;

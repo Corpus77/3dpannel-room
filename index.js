@@ -1,5 +1,5 @@
-import {filenames} from '/filenames1.js';
-import {weblogic} from "/custom_file_choice.js";
+//import {filenames} from '/filenames1.js';
+import {weblogic} from "./custom_file_choice.js";
 
 window.onload = function () {
     

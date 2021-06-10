@@ -7,10 +7,12 @@
 .question {
   width: 5%;
   height: 70%;
+  font-size: 70%;
 }
+
 img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   object-fit: contain;
 }
 .q {
@@ -44,6 +46,7 @@ img {
   height: 100vh;
   background: lightgrey;
 }
+
 .container_button {
   display: flex;
   flex-wrap: wrap;
@@ -54,6 +57,9 @@ img {
   margin: 1%;
   background: rgb(105, 97, 98);
   box-shadow: 10px 12px 5px black;
+}
+button {
+  cursor: pointer;
 }
 
 p {
@@ -114,6 +120,7 @@ p {
   margin: 2%;
   width: 25%;
   height: auto;
+  cursor: pointer;
 }
 .choiceAppear {
   display: flex;

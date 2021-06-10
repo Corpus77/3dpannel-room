@@ -1,4 +1,4 @@
-import {filenames} from '/filenames1.js';
+import {filenames} from './filenames1.js';
 const weblogic = {
     image: undefined,
     chosen: undefined,
@@ -60,9 +60,9 @@ const weblogic = {
                 
             }
             //let chosen = e.target.parentNode.querySelector('p').innerText;
-            weblogic.image = `url(${textures}/${this.chosen})`;
+            this.image = `url(${textures}/${this.chosen})`;
             
-            weblogic.choiceAppear(winChoice);
+            this.choiceAppear(winChoice);
             
         }
     }
