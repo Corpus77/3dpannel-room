@@ -36,6 +36,8 @@ const filenames = [
     {'5violet.jpg': 77, title: 'Фиолетовый кирпич 5мм'},
     {'5white.jpg': 77, title: 'Белый кирпич 5мм'},
     {'brokenwhitebrick5.webp': 77, title: 'Белый разбитый кирпич 5мм'},
+    {'comb_torn_stone.jpg': 77, title: 'Комбинированый рваный камень 7мм'},
+    {'whitebrick_different.jpg': 70, title: 'Белый кирпич декор 5мм'},
     {'5yellow+.jpg': 77, title: 'Желтый кирпич 5мм'},
     {'5yellow.jpg': 77, title: 'Бежевый кирпич 5мм'},
     {'5tornwhite.jpeg': 77, title: 'Рваный белый кирпич 5мм'},
@@ -90,6 +92,8 @@ const filenames = [
     {'klwhite.jpg': 77, title: 'Кладка белая 7мм'},
     {'klyellow.jpg': 77, title: 'Кладка желтая 7мм'},
     {'mech.jpg': 77, title: 'Шестеренки 5мм'},
+    {'brown_mramor.jpg': 77, title: 'Мрамор светло коричневый 5мм'},
+    {'grey_mramor.jpg': 77, title: 'Мрамор светло серый 5мм'},
     {'mrbegorange.jpg': 77, title: 'Мрамор оранж-беж 5мм'},
     {'mrbej.jpg': 77, title: 'Мрамор бежевый 5мм'},
     {'mrblack.jpg': 77, title: 'Мрамор черный 5мм'},
@@ -109,6 +113,7 @@ const filenames = [
     {'pot4conus.jpg': 70, title: 'Потолочная белая роза 5мм'},
     {'potbigornament.jpg': 70, title: 'Потолочная клевер 9мм'},
     {'potbigwave.jpg': 70, title: 'Потолочная большие волны 7мм'},
+    {'brown_wave.jpg': 70, title: 'Коричневая волна 7мм'},
     {'potcrashdark.jpg': 70, title: 'Потолочная серебрянная паутина 8мм'},
     {'potcrashed.jpg': 70, title: 'Потолочная белая паутинка 5мм'},
     {'potflower.jpg': 70, title: 'Белая лилия 5мм'},
@@ -162,6 +167,7 @@ const filenames = [
     {'woodzebra.jpg': 70, title: 'Дерево под зебру 7мм'},
     {'woodgrafit.jpg': 70, title: 'Дерево под графит 4мм'},
     {'woodcaramel.jpg': 70, title: 'Дерево под карамель 4мм'},
+    {'whitewood.jpg': 70, title: 'Белое дерево 6мм'},
     {'yellowromb+.jpg': 70, title: 'Бежевые ромбы 7мм'}
     ]
     export {filenames};
