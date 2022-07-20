@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles3.css" />
+    <title>Две стены</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <button id="fileAll">На всю стену</button>
+        <button class="inputFile">Выберите панель</button>
+        <button class="clear">Очистить</button>
+        <div class="angle">
+          <p>Выберите угол</p>
+          <p class="value"></p>
+          <input
+            type="range"
+            name="range"
+            id="range"
+            value="0"
+            min="-30"
+            max="30"
+          />
+        </div>
+      </nav>
+      <div class="wall wall_1" id="wall1"></div>
+      <div class="wall wall_2"></div>
+      <div class="noteDiv">
+        <p class="note">
+          При изменении размера окна браузера или переворачивании мобильного
+          устройства, возникают проблемы с размером панелей. Необходимо обновить
+          страницу и начать заново. Программа в доработке.
+        </p>
+      </div>
+    </div>
+    <script type="module" src="index3.js"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.useLocalIp": true,
+  "liveServer.settings.https": {
+    "cert": "",
+    "key": "",
+    "passphrase": ""
+  }
+}

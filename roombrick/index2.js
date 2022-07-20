@@ -1,5 +1,5 @@
 import {weblogic} from "../custom_file_choice.js";
-weblogic.createFileChoice("../textures", "body");
+weblogic.createFileChoice("../textures", "body", "../");
 let winChoice = weblogic.winChoice();
 let wall = document.querySelector('.wall');
 let inWall = document.querySelector('#inwall');
@@ -41,7 +41,7 @@ inWall.onclick = (e) => {
  //Choice of files
     
  winChoice.onclick = (e) => {
-    weblogic.applyTexture(e, 'example_container', winChoice, "../textures" ) 
+    weblogic.applyTexture(e, 'example_container', winChoice,"../", "textures" ) 
     };      
 
 

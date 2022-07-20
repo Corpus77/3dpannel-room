@@ -7,7 +7,7 @@ const weblogic = {
         return document.querySelector(".winChoice")},
 
 
-    createFileChoice: function (textures, container) {
+    createFileChoice: function (textures, container, pathPoint) {
         let winChoice = document.createElement('div');
         winChoice.className = "winChoice";
         
@@ -23,7 +23,7 @@ const weblogic = {
             let item_paragr = item_container.querySelector('p');
             item_paragr.className = 'item_paragr';
 
-            image.setAttribute('src', `${textures}/${objKeys[0]}`);
+            image.setAttribute('src', `${pathPoint}${textures}/${objKeys[0]}`);
             item_paragr.innerText = `${filenames[i][objKeys[1]]}`;
             //-------------------------------------------
             if (filenames[i][objKeys[0]] == 77) {
@@ -46,7 +46,7 @@ const weblogic = {
         winchoice.classList.toggle('choiceAppear');
        },
 
-       applyTexture: function (e, example, winChoice, textures) {
+       applyTexture: function (e, example, winChoice, pathPoint, textures) {
         if (e.target.parentNode.classList.contains(example)) {
             
             for (let imageObj of filenames){
@@ -60,7 +60,7 @@ const weblogic = {
                 
             }
             //let chosen = e.target.parentNode.querySelector('p').innerText;
-            this.image = `url(${textures}/${this.chosen})`;
+            this.image = `url(${pathPoint}${textures}/${this.chosen})`;
             
             this.choiceAppear(winChoice);
             

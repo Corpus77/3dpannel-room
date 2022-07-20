@@ -121,11 +121,11 @@ img {
 /* media request */
 @media (max-width: 1040px) {
   .info {
-    font-size: 0.5em;
-    padding: 2px;
+    font-size: 0.7em;
+    padding: 1px;
   }
   .item_paragr,
   span {
-    font-size: 0.7em;
+    font-size: .7em;
   }
 }

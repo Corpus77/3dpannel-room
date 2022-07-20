@@ -1,5 +1,5 @@
 import {weblogic} from "../custom_file_choice.js";
-weblogic.createFileChoice("../textures", "body");
+weblogic.createFileChoice("textures", "body", "../");
 let winChoice = weblogic.winChoice();
 
 
@@ -38,7 +38,7 @@ window.onresize = (e) => {
 
 winChoice.onclick =
 (e) => {
-    weblogic.applyTexture(e, 'example_container', winChoice, "../textures" );
+    weblogic.applyTexture(e, 'example_container', winChoice,"../", "textures" );
     switch (aim){
     case 'bl_1': 
     if ( weblogic.image){
