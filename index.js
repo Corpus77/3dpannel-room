@@ -1,5 +1,6 @@
 //import {filenames} from '/filenames1.js';
 import { weblogic } from "./custom_file_choice.js";
+
 let globalLogic = (path, numWalls) => {
   function main() {
     weblogic.createFileChoice("textures", ".container", path);

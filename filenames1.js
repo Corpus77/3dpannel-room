@@ -46,6 +46,8 @@ const filenames = [
   { "5tornwhite.jpeg": 77, title: "Рваный белый кирпич 5мм" },
   { "5tornbej.jpeg": 77, title: "Рваный бежевый кирпич 5мм" },
   { "5torngrey.jpeg": 77, title: "Рваный серый кирпич 5мм" },
+  {"orangestone.webp": 70, title: "Рваный оранжевый камень 8мм"},
+  {"st.webp": 77, title: "Разноцветные полоски 6мм"},
   { "7birusa.jpg": 77, title: "Бирюзовый кирпич 7мм" },
   { "7black.jpg": 77, title: "Черный кирпич 7мм" },
   { "7blue.jpg": 77, title: "Голубой кирпич 7мм" },
@@ -173,7 +175,7 @@ const filenames = [
   { "woodflower.jpg": 70, title: "Цветущее дерево 5мм" },
   { "woodgold.jpg": 70, title: "Золотистое дерево 7мм" },
   { "woodgreybrown.jpg": 70, title: "Серо-коричневое дерево 7мм" },
-
+  
   { "rosetree4.webp": 77, title: "Розовый микс" },
   { "woodlightouk.jpg": 70, title: "Светлый дуб 5мм" },
   { "woodmiata.jpg": 70, title: "Мятное дерево 5мм" },
@@ -197,5 +199,8 @@ const filenames = [
   { "venzelgold.webp": 70, title: "Вензель золотой 5мм" },
   { "venzelviolet.webp": 70, title: "Вензель фиолетовый 5мм" },
   { "venzelsilver.webp": 70, title: "Вензель серебро 5мм" },
+  { "venzelsilver.webp": 70, title: "Вензель серебро 5мм" },
+  
+  // {"stripes.webp": 77, title: "Разноцветные полоски 6мм "},
 ];
 export { filenames };
